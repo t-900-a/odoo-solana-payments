@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--SOL Currency Record-->
+        <record id="currency_sol" model="res.currency">
+            <field name="name">SOL</field>
+            <field name="currency_unit_label">Solana</field>
+            <field name="symbol">◎</field>
+            <field name="position">after</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>
