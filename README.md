@@ -43,8 +43,13 @@ Requires these Odoo modules:
                 'payment',
                 'base_setup',
                 'web',
+                'website_sale_require_login',
+                'website_sale_suggest_create_account',
                 
-Install this module.
+Install the modules above first. Install this module.
+
+Go to Settings > General Settings > Website > Customer Account.
+Enable Free sign up.
 
 Add your wallet address and / or alias: Website > Configuration > Payment Acquirers > Edit
 
