@@ -41,7 +41,10 @@ class SolanaSalesOrder(models.Model):
                              "sale_order_transaction_rel.transaction_id AND payment_transaction.acquirer_id = "
                              f"{acquirer.id}")
 
-            # TODO BUG!!!!! if you're not logged in, this above sql query doesn't return any results!
+            # TODO https://github.com/t-900-a/odoo-solana-payments/issues/1
+            # If you're not logged in, this above sql query doesn't return any results, 
+            # hince why it is a requirement to have: 'website_sale_require_login', 'website_sale_suggest_create_account' installed
+            # long term plan is to get the transactions from a queue
 
             for payment_transaction_id, sale_order_id, payment_token_id in self.env.cr.fetchall():
                 # expected TO address: acquirer.address
